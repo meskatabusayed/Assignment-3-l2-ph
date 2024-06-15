@@ -21,12 +21,8 @@
    
  # Installation and Setup
 
- <p>1. Clone this repository:</p>
-      git clone https://github.com/meskatabusayed/Assignment-3-l2-ph.git
-
-
- <p>2. Install dependencies:</p>
-    -npm i
+ <p>1. Clone this repository: - git clone https://github.com/meskatabusayed/Assignment-3-l2-ph.git</p>
+<p>2. Install dependencies: -npm i</p>
 <p>3. Set up environment variables:</p> 
     Create a ".env" file with the following variables:
          -PORT=5000
@@ -36,5 +32,4 @@
          -JWT_ACCESS_EXPIRES= Your Jwt Token Expire time
 <p>4.Start the server:</p>
    -npm run start:dev
-
 <p>5.Access the application in your browser at http://localhost:5000</p>
