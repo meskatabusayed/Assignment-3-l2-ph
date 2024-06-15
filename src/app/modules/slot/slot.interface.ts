@@ -9,3 +9,8 @@ export type TSlot = {
   endTime: string;
   isBooked: TIsBooked;
 };
+
+export interface TSlotQueryParams {
+  date?: string;
+  serviceId?: string;
+}

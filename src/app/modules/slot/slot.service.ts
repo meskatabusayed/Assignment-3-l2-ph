@@ -1,7 +1,7 @@
 import httpStatus from 'http-status';
 import AppError from '../../errors/AppError';
 import { Service } from '../service/service.model';
-import { TSlot } from './slot.interface';
+import { TSlot, TSlotQueryParams } from './slot.interface';
 import { Slot } from './slot.model';
 
 const createSlot = async (payload: TSlot) => {
@@ -63,10 +63,12 @@ const getAvailableSlots = async (query: Record<string, unknown>) => {
     queryObj.service = query.serviceId as string;
   }
 
-  const result = await Slot.find(queryObj);
+  const result = await Slot.find({ isBooked: { $ne: 'booked' } });
 
   return result;
 };
+
+
 
 export const SlotSlot = {
   createSlot,
