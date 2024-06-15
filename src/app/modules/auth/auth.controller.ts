@@ -4,6 +4,7 @@ import { AuthServices } from './auth.services';
 import catchAsync from '../../../utils/catchAsync';
 import sendResponse from '../../../utils/sendResponse';
 
+//sign up section
 const signUp: RequestHandler = catchAsync(async (req, res) => {
   const result = await AuthServices.signUp(req.body);
   sendResponse(res, {
@@ -13,6 +14,8 @@ const signUp: RequestHandler = catchAsync(async (req, res) => {
     data: result,
   });
 });
+
+//login section
 const login: RequestHandler = catchAsync(async (req, res) => {
   const { token, user } = await AuthServices.login(req.body);
 

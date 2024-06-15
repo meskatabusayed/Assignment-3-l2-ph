@@ -5,7 +5,7 @@ import { TUserRoles } from '../modules/user/user.interface';
 import { User } from '../modules/user/user.model';
 import config from '../../config';
 
-
+//auth section
 const auth = (...requiredRoles: TUserRoles[]) => {
   return async (req: Request, res: Response, next: NextFunction) => {
     try {
