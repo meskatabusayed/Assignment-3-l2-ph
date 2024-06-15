@@ -51,4 +51,4 @@ const userSchema = new Schema<TUser>(
     return obj;
   };
 
-  export const User = model<TUser>('user', userSchema);
+  export const User = model<TUser>('User', userSchema);

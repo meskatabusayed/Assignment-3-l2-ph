@@ -1,8 +1,10 @@
 import express from 'express';
 import validateRequest from '../../middlewares/validateRequest';
-import { BookingValidations } from './booking.validation';
+
 import { BookingControllers } from './booking.controller';
 import auth from '../../middlewares/auth';
+import { BookingValidations } from './booking.validation';
+
 
 const router = express.Router();
 

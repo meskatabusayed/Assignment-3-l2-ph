@@ -10,3 +10,4 @@ export const vehicleTypes = [
     'bicycle',
     'tractor',
   ] as const;
+

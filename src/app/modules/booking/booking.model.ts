@@ -43,4 +43,6 @@ const bookingSchema = new Schema(
   { timestamps: true },
 );
 
-export const Booking = model<TBooking>('booking', bookingSchema);
+export const Booking = model<TBooking>('Booking', bookingSchema);
+
+

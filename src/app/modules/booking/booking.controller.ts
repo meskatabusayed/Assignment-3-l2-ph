@@ -6,7 +6,9 @@ import sendResponse from '../../../utils/sendResponse';
 
 const createBooking = catchAsync(async (req, res) => {
   const user = req.user;
+  // console.log(req.body);
   const result = await BookingServices.createBooking(req.body, user);
+  console.log(result)
   sendResponse(res, {
     success: true,
     statusCode: httpStatus.OK,
@@ -44,3 +46,7 @@ export const BookingControllers = {
   getUserBooking,
   getAllBookings,
 };
+
+
+
+
