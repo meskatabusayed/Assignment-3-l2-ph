@@ -63,7 +63,8 @@ const getAvailableSlots = async (query: Record<string, unknown>) => {
     queryObj.service = query.serviceId as string;
   }
 
-  const result = await Slot.find({ isBooked: { $ne: 'booked' } });
+  const result = await Slot.find({ isBooked: { $ne: 'booked' } })
+  .populate('service')
 
   return result;
 };

@@ -45,8 +45,9 @@ const createBooking = async (payload: TBookingForReq, user: JwtPayload) => {
   });
 
   const result = await Booking.findById(booking?._id)
-  .populate(["customer" , "service"])
-  
+  .populate("customer")
+  .populate("service")
+  .populate("slot");
   return result;
 };
 
