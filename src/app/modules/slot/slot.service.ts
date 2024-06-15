@@ -1,7 +1,7 @@
 import httpStatus from 'http-status';
 import AppError from '../../errors/AppError';
 import { Service } from '../service/service.model';
-import { TSlot, TSlotQueryParams } from './slot.interface';
+import { TSlot } from './slot.interface';
 import { Slot } from './slot.model';
 
 const createSlot = async (payload: TSlot) => {
