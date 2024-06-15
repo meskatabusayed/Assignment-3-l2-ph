@@ -17,5 +17,13 @@
  <li>Validation: Zod Validations</li>
  <li>Authentication: JSON Web Tokens (JWT)</li>
  <li>Deployment: Deployed on Vercel</li>
+
+   
+ # Installation and Setup
+
+ <p>1. Clone this repository:</p>
+      git clone https://github.com/meskatabusayed/Assignment-3-l2-ph.git
+
+
  
  
