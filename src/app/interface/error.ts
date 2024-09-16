@@ -1,10 +1,13 @@
-export type TErrorMessages = {
-    path: string | number;
+
+export type CErrorSources = {
+    path: string;
     message: string;
   }[];
   
-  export type TErrorResponse = {
+
+  export type CGenericErrorResponse = {
     statusCode: number;
     message: string;
-    errorMessages: TErrorMessages;
+    errorSources: CErrorSources;
   };
+  

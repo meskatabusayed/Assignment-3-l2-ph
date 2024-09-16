@@ -1,38 +1,46 @@
-import express from 'express';
-import { AuthRoutes } from '../modules/auth/auth.route';
-import { ServiceRoutes } from '../modules/service/service.route';
-import { SlotRoutes, SlotRoutes2 } from '../modules/slot/slot.route';
-import { BookingRoutes, BookingRoutes2 } from '../modules/booking/booking.route';
+import { Router } from "express";
+import { UserRoutes } from "../Module/User/user.route";
+import { ServiceRoute } from "../Module/Service/service.route";
+import { SlotRoutes } from "../Module/Slot/slot.route";
+import { BookingRoutes } from "../Module/Booking/booking.route";
+import { AuthRoutes } from "../Module/Auth/auth.route";
+import { PaymentRoutes } from "../Module/Payment/payment.route";
+import { ReviwRoute } from "../Module/Reviw/reviw.route";
 
-const router = express.Router();
+
+const router = Router();
 
 const moduleRoutes = [
   {
-    path: '/auth',
-    route: AuthRoutes,
+    path: "",
+    route: UserRoutes,
   },
   {
-    path: '/services',
-    route: ServiceRoutes,
+    path: "",
+    route : ServiceRoute
   },
   {
-    path: '/services/slots',
-    route: SlotRoutes,
+    path: "",
+    route: SlotRoutes
   },
   {
-    path: '/slots/availability',
-    route: SlotRoutes2,
+    path: "",
+    route: BookingRoutes 
   },
   {
-    path: '/bookings',
-    route: BookingRoutes,
+    path: "",
+    route: AuthRoutes 
   },
   {
-    path: '/my-bookings',
-    route: BookingRoutes2,
+    path: "",
+    route: PaymentRoutes 
   },
+  {
+    path: "",
+    route: ReviwRoute 
+  }
 ];
 
-moduleRoutes.forEach((item) => router.use(item.path, item.route));
+moduleRoutes.forEach((route) => router.use(route.path, route.route));
 
 export default router;
