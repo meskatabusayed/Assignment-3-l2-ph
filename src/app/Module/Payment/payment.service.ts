@@ -5,9 +5,10 @@ const initiale = async (BookingInitaleData: any) => {
   const transactionId = `TXN-${Date.now()}`;
   const OrderDate = {
     transactionId,
-    customerName: BookingInitaleData?.userName,
-    customerEmail: BookingInitaleData?.userEmail,
+    customerName: BookingInitaleData?.name,
+    customerEmail: BookingInitaleData?.email,
     totalPrice: BookingInitaleData?.totalePrice,
+    timeRange: BookingInitaleData?.timeRange,
     customerPhone: BookingInitaleData?.phone,
     customerAddress: BookingInitaleData?.address,
     BookinId: BookingInitaleData?.BookingId,
