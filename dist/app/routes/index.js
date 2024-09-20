@@ -1,39 +1,43 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const auth_route_1 = require("../modules/auth/auth.route");
-const service_route_1 = require("../modules/service/service.route");
-const slot_route_1 = require("../modules/slot/slot.route");
-const booking_route_1 = require("../modules/booking/booking.route");
-const router = express_1.default.Router();
+const express_1 = require("express");
+const user_route_1 = require("../Module/User/user.route");
+const service_route_1 = require("../Module/Service/service.route");
+const slot_route_1 = require("../Module/Slot/slot.route");
+const booking_route_1 = require("../Module/Booking/booking.route");
+const auth_route_1 = require("../Module/Auth/auth.route");
+const payment_route_1 = require("../Module/Payment/payment.route");
+const reviw_route_1 = require("../Module/Reviw/reviw.route");
+const router = (0, express_1.Router)();
 const moduleRoutes = [
     {
-        path: '/auth',
-        route: auth_route_1.AuthRoutes,
+        path: "",
+        route: user_route_1.UserRoutes,
     },
     {
-        path: '/services',
-        route: service_route_1.ServiceRoutes,
+        path: "",
+        route: service_route_1.ServiceRoute
     },
     {
-        path: '/services/slots',
-        route: slot_route_1.SlotRoutes,
+        path: "",
+        route: slot_route_1.SlotRoutes
     },
     {
-        path: '/slots/availability',
-        route: slot_route_1.SlotRoutes2,
+        path: "",
+        route: booking_route_1.BookingRoutes
     },
     {
-        path: '/bookings',
-        route: booking_route_1.BookingRoutes,
+        path: "",
+        route: auth_route_1.AuthRoutes
     },
     {
-        path: '/my-bookings',
-        route: booking_route_1.BookingRoutes2,
+        path: "",
+        route: payment_route_1.PaymentRoutes
     },
+    {
+        path: "",
+        route: reviw_route_1.ReviwRoute
+    }
 ];
-moduleRoutes.forEach((item) => router.use(item.path, item.route));
+moduleRoutes.forEach((route) => router.use(route.path, route.route));
 exports.default = router;

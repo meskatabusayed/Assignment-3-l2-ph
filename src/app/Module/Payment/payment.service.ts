@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Booking } from "../Booking/booking.model";
 import { initialePayment, verifyPayment } from "./payment.utils";
 

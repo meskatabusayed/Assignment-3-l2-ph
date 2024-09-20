@@ -30,7 +30,7 @@ const loginUser = async (payload: CLoginUser) => {
     role: user.role,
   };
   const expireData = parseInt(config.jwt_assess_exrpired as string)
-  console.log(expireData);
+  
 
 
   const accessToken = createToken(
